@@ -2,7 +2,13 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // nouvelle animation shimmer pour le squelette de chargement
+      keyframes: {
+        shimmer: { "100%": { transform: "translateX(100%)" } }, // déplace le gradient de gauche à droite
+      },
+      animation: { shimmer: "shimmer 1.5s infinite" }, // applique l'animation shimmer en boucle pendant 1.5s
+    },
   },
   plugins: [],
 };
