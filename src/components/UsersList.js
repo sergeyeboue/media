@@ -8,9 +8,11 @@ import Button from "./Button";
 function UsersList() {
   const [isLoadingUsers, setIsLoadingUsers] = useState(false);
   const [loadingUsersError, setLoadingUsersError] = useState(null);
+  const [iscreatingUser, setIsCreatingUser] = useState(false);
+  const [creatingUserError, setCreatingUserError] = useState(null);
 
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.users);
+  const { data } = useSelector((state) => state.users); // get data user !
 
   useEffect(() => {
     setIsLoadingUsers(true);
@@ -21,8 +23,13 @@ function UsersList() {
       .finally(() => setIsLoadingUsers(false));
   }, [dispatch]);
 
+  //handle for add user !
   const handleAddUser = () => {
-    dispatch(addUser());
+    setIsCreatingUser(true);
+    dispatch(addUser())
+      .unwrap()
+      .catch((err) => setCreatingUserError(err))
+      .finally(() => setIsCreatingUser(false));
   };
 
   if (isLoadingUsers) {
@@ -45,7 +52,12 @@ function UsersList() {
     <div>
       <div className="flex felx-row justify-between m-3">
         <h1 className="m-2 text-xl">Users</h1>
-        <Button onClick={handleAddUser}> + Add User</Button>
+        {iscreatingUser ? (
+          "creating user..."
+        ) : (
+          <Button onClick={handleAddUser}> + Add User</Button>
+        )}
+        {creatingUserError && "error creating user"}
       </div>
       {renderedUsers}
     </div>
