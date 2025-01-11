@@ -1,29 +1,10 @@
 import React from "react";
-import { useEffect, useState, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { fetchUsers, addUser } from "../store/index";
 import Skeleton from "./skeleton";
 import Button from "./Button";
-
-function useThunk(thunk) {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const dispatch = useDispatch();
-
-  const runThunk = useCallback(
-    (arg) => {
-      setLoading(true);
-      dispatch(thunk(arg))
-        .unwrap()
-        .catch((err) => setError(err))
-        .finally(() => setLoading(false));
-    },
-    [dispatch, thunk]
-  );
-
-  return [runThunk, loading, error];
-}
+import { useThunk } from "../hooks/use-thunk";
 
 function UsersList() {
   const [dofetchUsers, isLoadingUsers, loadingUsersError] =
