@@ -1,10 +1,16 @@
 {
   "users": [
     {
-      "id": "8dc1",
-      "name": "Clayton Stark"
+      "id": "6517",
+      "name": "Antoinette Morissette"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "1",
+      "title": "quidem molestiae enim",
+      "userId": "6517"
+    }
+  ],
   "photos": []
 }
