@@ -7,8 +7,33 @@
     {
       "id": "4d80",
       "name": "Tammy Goyette"
+    },
+    {
+      "id": "1677",
+      "name": "Greg O'Reilly"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "fab4",
+      "title": "Recycled Soft Shirt",
+      "userId": "4d80"
+    },
+    {
+      "id": "dd93",
+      "title": "Incredible Granite Tuna",
+      "userId": "4ee0"
+    },
+    {
+      "id": "1429",
+      "title": "Generic Frozen Table",
+      "userId": "4ee0"
+    },
+    {
+      "id": "ea6d",
+      "title": "Small Plastic Sausages",
+      "userId": "4ee0"
+    }
+  ],
   "photos": []
 }
