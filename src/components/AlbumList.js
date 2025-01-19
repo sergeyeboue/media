@@ -1,7 +1,7 @@
 import { useFetchAlbumsQuery, useCreateAlbumMutation } from "../store";
 import Skeleton from "./skeleton";
 import Button from "./Button";
-import ExpendablePanel from "./ExpendablePanel";
+import AlbumListItem from "./AlbumListItem";
 
 function AlbumList({ user }) {
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
@@ -14,26 +14,22 @@ function AlbumList({ user }) {
   let content;
   if (isLoading) {
     // content =
-    content = <Skeleton times={3} />;
+    content = <Skeleton times={3} className="h-10 w-full" />;
   } else if (error) {
     content = <h3>error...</h3>;
   } else {
     content = data.map((album) => {
-      const header = <div>{album.title}</div>;
-
-      return (
-        <ExpendablePanel key={album.id} header={header}>
-          List of photos here
-        </ExpendablePanel>
-      );
+      return <AlbumListItem key={album.id} album={album} />;
     });
   }
 
   return (
     <div>
-      <div>
-        AlbumList For {user.name}
-        <Button onClick={handleClick}> + Add Album</Button>
+      <div className="m-2 flex flex-row items-center justify-between">
+        <h3 className="text-lg font-bold ">AlbumList For {user.name}</h3>
+        <Button loading={result.isLoading} onClick={handleClick}>
+          + Add Album
+        </Button>
       </div>
       <div>{content}</div>
     </div>

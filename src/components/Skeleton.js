@@ -8,7 +8,7 @@ function Skeleton({ times, className }) {
     "rounded",
     "mb-2.5",
     className
-  ); // pour la div qui bouge de gauche à droite (le gradient)
+  ); // pour le div extérieur qui contient l'effet scintillant
   const innerClassesNames = classNames(
     "animate-shimmer",
     "absolute",
@@ -18,7 +18,7 @@ function Skeleton({ times, className }) {
     "from-gray-200",
     "via-white",
     "to-gray-200"
-  ); // pour la div qui bouge de gauche à droite (le gradient)
+  ); // pour le div intérieur qui crée l'effet scintillant
 
   const boxes = Array(times)
     .fill(0)

@@ -15,7 +15,11 @@ function UsersListItem({ user }) {
 
   const header = (
     <>
-      <Button loading={isRemovingUser} onClick={handleRemoveUser}>
+      <Button
+        className="mr-2"
+        loading={isRemovingUser}
+        onClick={handleRemoveUser}
+      >
         <GoTrashcan />
       </Button>
 

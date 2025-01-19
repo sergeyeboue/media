@@ -3,14 +3,12 @@
     {
       "id": "4ee0",
       "name": "Brent Bechtelar"
-    }
-  ],
-  "albums": [
+    },
     {
-      "id": "bfdd",
-      "title": "Tasty Frozen Bike",
-      "userId": "4ee0"
+      "id": "4d80",
+      "name": "Tammy Goyette"
     }
   ],
+  "albums": [],
   "photos": []
 }
