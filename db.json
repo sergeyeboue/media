@@ -20,20 +20,31 @@
       "userId": "4d80"
     },
     {
-      "id": "dd93",
-      "title": "Incredible Granite Tuna",
+      "id": "b428",
+      "title": "Tasty Bronze Car",
       "userId": "4ee0"
     },
     {
-      "id": "1429",
-      "title": "Generic Frozen Table",
-      "userId": "4ee0"
-    },
-    {
-      "id": "ea6d",
-      "title": "Small Plastic Sausages",
+      "id": "a95c",
+      "title": "Bespoke Steel Tuna",
       "userId": "4ee0"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "9016",
+      "albumId": "b428",
+      "url": "https://loremflickr.com/150/150/abstract?lock=82965"
+    },
+    {
+      "id": "3946",
+      "albumId": "b428",
+      "url": "https://loremflickr.com/150/150/abstract?lock=9819"
+    },
+    {
+      "id": "025b",
+      "albumId": "b428",
+      "url": "https://loremflickr.com/150/150/abstract?lock=83015"
+    }
+  ]
 }
