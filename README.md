@@ -44,17 +44,3 @@ npx json-server --watch db.json --port 3001
 7. Lancer le front-end
 npm run dev
 L’application sera accessible sur http://localhost:5173
-
-📁 Project Structure
-media/
-├── public/
-├── src/
-│   ├── components/   → Composants réutilisables
-│   ├── hooks	/
-│   ├── store/        → Configuration & Logique Redux
-│   └── App.js        
-|   └── index.js      → Point d’entrée de l’application
-├── db.json           → Fichier simulant la base de données
-├── index.html
-├── tailwind.config.js
-└── vite.config.js
